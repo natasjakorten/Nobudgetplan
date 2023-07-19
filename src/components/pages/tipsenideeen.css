@@ -21,5 +21,7 @@ code {
     monospace;
 }
 
-
-
+#form-message {
+    width: 300px;
+    height: 100px;
+}
