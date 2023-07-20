@@ -14,6 +14,10 @@ nav {
     height: 60px;
 }
 
+button + button {
+    margin-left: 50px;
+}
+
 nav a,
 nav a:visited {
     text-decoration: none;

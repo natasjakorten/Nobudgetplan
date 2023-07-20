@@ -16,8 +16,7 @@ function SignIn() {
             <h1>Inloggen</h1>
             <p>Log hier in als je een account hebt</p>
 
-            <form onSubmit={handleSubmit}>
-                <p>*invoervelden*</p>
+                <form onSubmit={handleSubmit}>
                 <button type="submit">Inloggen</button>
             </form>
 

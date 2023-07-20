@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import Header from '../../components/header/Header';
+
 
 
 function Profile() {
@@ -28,13 +28,16 @@ function Profile() {
         <h1>Profielpagina</h1>
         <section>
             <h2>Gegevens</h2>
-            <p><strong>Gebruikersnaam:</strong> hardcoded-test</p>
-            <p><strong>Email:</strong> hardcoded@test.com</p>
+            <p><strong>Gebruikersnaam:</strong> blabla</p>
+            <p><strong>Email:</strong> blabla@test.com</p>
         </section>
 
         <section>
-            <h2>Strikt geheime profiel-content</h2>
-            <p>Klik hier als je de activiteit per mail wilt ontvangen</p>
+            <h2>beveiligd wachtwoord</h2>
+            <p>Klik hieronder aan als je de activiteit per mail wilt ontvangen</p>
+
+
+
 
             <h2>Gevonden activiteit:</h2>
             {activityData.activity}
@@ -50,10 +53,10 @@ function Profile() {
             <button
                 type="button"
                 onClick={chooseActivity}>
-                Meld je aan
+                klik hier voor de activiteit per mail te krijgen
             </button>
         </section>
-        <p>Terug naar de <Link to="/">Product</Link></p>
+        <p>Terug naar de <Link to="/">homepagina</Link></p>
         </>;
     return element;
 }
