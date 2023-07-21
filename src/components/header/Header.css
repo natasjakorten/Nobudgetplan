@@ -1,6 +1,6 @@
 .title-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex;
     align-items: center;
     margin: 50px 0;
 }

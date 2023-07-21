@@ -1,6 +1,26 @@
 # NoBudgetPlan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Probleembeschrijving
+Er is op dit moment geen applicatie die specifiek activiteiten benoemd voor gezinnen met geen 
+of beperkt budget. Met deze applicatie kunnen mensen een activiteit opvragen die weinig of geen geld kost. 
+Deze activiteit kan worden opgevraagd door middels Bored Api
+Daarnaast kan er steeds weer een nieuwe activiteit worden aangevraagd die dan per mail kan
+worden verzonden naar de gebruiker.
+De gebruiker kan zich registreren door middels naam, email en wachtwoord op te geven. de gebruiker komt
+dan op een profielpagina zodat hij al zijn gegevens zien.
+Daarnaast kan de gebruiker inloggen door middels naam, e-mail en wachtwoord in te vullen.
+Ook kan de gebruiker zijn of haar tips en ideeën achter laten en akkoord gaan met de algemene 
+voorwaarden.
+De website bestaat uit volgende pagina's:
+-Product
+-Inschrijven
+-Inloggen
+-Profiel
+-Tips en ideeën
+-Veel gestelde vragen
+-Contact.
+
+
 
 ## Available Scripts
 

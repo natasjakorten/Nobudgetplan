@@ -7,7 +7,7 @@
 }
 
 nav {
-    width: 100%;
+    width: 75%;
     background-color: #3624ff;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@ ul {
     flex-basis: 550px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex;
 }
 
 nav .active-link {

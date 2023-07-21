@@ -6,7 +6,7 @@ import './veelgesteldevragen.css';
 function Veelgesteldevragen() {
     return (
             <main className="veelgesteldevragen">
-            <Header title="Veelgesteldevragen"/>
+            <Header title="Veel gestelde vragen"/>
 
              <article className="puzzelen">
             <img src={puzzelen} alt="puzzelen"/>
@@ -36,6 +36,7 @@ function Veelgesteldevragen() {
              5. Moet ik betalen voor mij te registreren?
                 <br/>
              Nee, deze website is voor mensen die beperkt budget hebben en wij vragen dan ook niks voor deze service.
+                <br/>
             </p>
         </article>
         </main>

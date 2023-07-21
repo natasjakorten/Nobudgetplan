@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import Header from '../../components/header/Header';
-import rennen from '../../assets/rennen.jpg';
+import rennen from '../../assets/rennen2.jpg';
 import './tipsenideeen.css';
 
 function Tipsenideeen() {
@@ -21,8 +21,8 @@ function Tipsenideeen() {
         <main className="tipsenideeen">
             <Header title="Tips en ideeën"/>
 
-            <article className="rennen">
-                    <img src={rennen} alt="rennen"/>
+            <article className="rennen2">
+                    <img src={rennen} alt="rennen2"/>
                     <h2>Tips en ideeën</h2>
 
                     <p>Wij zien graag tips graag tips en ideeën van jullie! <br/>
@@ -47,6 +47,7 @@ function Tipsenideeen() {
                     </label>
                 </form>
             </article>
+            <br/>
 
         </main>
     );
