@@ -33,7 +33,7 @@ ul {
     flex-basis: 550px;
     display: flex;
     justify-content: space-between;
-    align-items: flex;
+    align-items: stretch;
 }
 
 nav .active-link {

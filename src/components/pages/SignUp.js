@@ -16,7 +16,14 @@ function SignUp() {
 
         setSuccess(true);
 
-        // hier registreren via back-end
+        const result = await axios.post('https://link-naar-endpoint.nl', {
+            username: 'piet',
+            email: 'piet@novi.nl',
+            password: '123456',
+            "role": ["user"]
+        }, {
+            'Content-Type': 'application/json'
+        });
     }
 
     return (
@@ -45,6 +52,17 @@ function SignUp() {
                             required
                         /><br/>
 
+                        <label htmlFor="email">
+                            Email:
+                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            autoComplete="off"
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
+                            required
+                        /><br/>
 
                         <label htmlFor="password">
                             Wachtwoord:
