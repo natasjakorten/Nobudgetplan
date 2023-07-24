@@ -1,29 +1,30 @@
 import {React, useState} from "react";
+import axios from 'axios';
 import {Link} from "react-router-dom";
 
 function SignUp() {
     const [user, setUser] = useState('');
-
+    const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
-
     const [matchPwd, setMatchPwd] = useState('');
-
     const [success, setSuccess] = useState(false);
+    const baseUrl = "https://frontend-educational-backend.herokuapp.com/";
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         // MOET NOG WEGGEHAALD WORDEN als back-end gekoppeld/aangeroepen is
-        console.log("Gebruikersnaam: " + user + " - Wachtwoord: " + pwd);
-
         setSuccess(true);
 
-        const result = await axios.post('https://link-naar-endpoint.nl', {
-            username: 'piet',
-            email: 'piet@novi.nl',
-            password: '123456',
-            "role": ["user"]
-        }, {
-            'Content-Type': 'application/json'
-        });
+        try {
+            const result = await axios.post(`${baseUrl}api/auth/signup`, {
+                "username": user,
+                "email" : email,
+                "password" : pwd,
+                "role": ["user"]
+            });
+        }
+        catch(e) {
+            console.log(`Er is iets misgegaan met registreren: ${e}`);
+        }
     }
 
     return (
@@ -59,8 +60,8 @@ function SignUp() {
                             type="text"
                             id="email"
                             autoComplete="off"
-                            onChange={(e) => setUser(e.target.value)}
-                            value={user}
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                             required
                         /><br/>
 

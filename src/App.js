@@ -10,6 +10,7 @@ import Veelgesteldevragen from './components/pages/Veelgesteldevragen';
 import Contact from './components/pages/Contact';
 import Navigation from './components/Navigation/Navigation';
 
+
 function App() {
     return (
         <Router>
@@ -25,24 +26,7 @@ function App() {
             </Routes>
         </Router>
     );
-    /*return (
-            <Navigation />
-            <Product />
-            <Inschrijven />
-            <Tipsenideeen />
-            <Veelgesteldevragen />
-            <Contact />
-            <NavBar />
-            <div className="content">
-                <Routes>
-                    <Route exact path="/" element={<Product />}/>
-                    <Route path="/profile" element={ isAuth ? <Profile /> : <Navigate to="/signin" />}/>
-                    <Route path="/signin" element={ <SignIn />} />
-                    <Route path="/signup" element={<SignUp />}/>
 
-                </Routes>
-            </div>
-    );*/
 }
 
 export default App;
