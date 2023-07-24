@@ -11,9 +11,6 @@ function SignUp() {
     const baseUrl = "https://frontend-educational-backend.herokuapp.com/";
 
     const handleSubmit = async () => {
-        // MOET NOG WEGGEHAALD WORDEN als back-end gekoppeld/aangeroepen is
-        setSuccess(true);
-
         try {
             const result = await axios.post(`${baseUrl}api/auth/signup`, {
                 "username": user,
@@ -24,7 +21,11 @@ function SignUp() {
         }
         catch(e) {
             console.log(`Er is iets misgegaan met registreren: ${e}`);
+            setSuccess(false);
+            return;
         }
+
+        setSuccess(true);
     }
 
     return (
