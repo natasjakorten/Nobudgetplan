@@ -1,6 +1,6 @@
 .nav-container {
     flex-basis: 1000px;
-    margin: 0 auto;
+    margin: 75 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@ nav {
 }
 
 button + button {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 nav a,

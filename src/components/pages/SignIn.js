@@ -1,28 +1,51 @@
-import React, { useContext } from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-
+import axios from "axios";
 
 function SignIn() {
-    const { login } = useContext(AuthContext);
+    const [activityData, setActivityData] = useState({});
+    let chosenActivityData;
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        login();
-    }
 
-    return (
-        <>
-            <h1>Inloggen</h1>
-            <p>Log hier in als je een account hebt</p>
+        async function fetchData() {
+            try{
+                const result = await axios.get('http://www.boredapi.com/api/activity?participants=3', {
+                    'Accept': 'application/json'
+                });
+                setActivityData(result.data);
+            } catch (e) {
+                console.error(e);
+            }
+        }
 
-                <form onSubmit={handleSubmit}>
-                <button type="submit">Inloggen</button>
-            </form>
+        async function chooseActivity() {
+            chosenActivityData = 'De gekozen activiteit is: ' + activityData.activity + ' - Groetjes Natasja.';
+            console.log(chosenActivityData);
+        }
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-        </>
-    );
-}
+
+        function SignIn() {
+            const {login} = useContext(AuthContext);
+
+            function handleSubmit(e) {
+                e.preventDefault();
+                login();
+            }
+
+            return (
+                <>
+                    <h1>Inloggen</h1>
+                    <p>Log hier in als je een account hebt</p>
+
+                    <form onSubmit={handleSubmit}>
+                        <button type="submit">Inloggen</button>
+                    </form>
+
+                    <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+                </>
+            )
+
+        }
 
 export default SignIn;

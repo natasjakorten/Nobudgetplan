@@ -20,3 +20,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+verveling.jpg {
+    width: 200px;
+    border-radius: 50%;
+    border: 8px solid #B36A5E;
+    margin-bottom: 10px;
+}

@@ -26,3 +26,9 @@ code {
     height: 100px;
 
 }
+rennen2.jpg {
+    width: 300px;
+    border-radius: 50%;
+    border: 8px solid #B36A5E;
+    margin-bottom: 10px;
+}

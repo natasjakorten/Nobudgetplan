@@ -9,8 +9,7 @@ function Product() {
                 <Header title="Homepagina"/>
                     <article className="verveling">
                         <img src={verveling} alt="verveling"/>
-
-                        <h1>No Budget Plan</h1>
+                        <h1>NoBudgetPlan</h1>
                         <p>Slaat de verveling toe? En is er weinig tot geen budget voor activiteiten?<br/>
                             Zouden jullie als gezin leuke activiteiten willen doen voor weinig tot geen geld?
                             Dan is hier de oplossing ! <br/>
@@ -19,10 +18,11 @@ function Product() {
                             Heb je nog ideeën voor andere gratis activiteiten die mogelijk zijn
                             voor een gezin te ondernemen zijn dan willen we dat heel graag horen van jou! <br/>
                             Laat je super idee achter op onze tips en ideeën pagina!</p>
+                    <br/>
                     </article>
                 </main>
             );
-            }
+}
 
             export default Product;
 

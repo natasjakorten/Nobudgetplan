@@ -6,7 +6,6 @@ function SignUp() {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
-    const [matchPwd, setMatchPwd] = useState('');
     const [success, setSuccess] = useState(false);
     const baseUrl = "https://frontend-educational-backend.herokuapp.com/";
 
@@ -39,10 +38,12 @@ function SignUp() {
                 <section>
                     <h1>Registreren</h1>
                     <p>Registreer je hier en ontvang een activiteit op je profielpagina</p>
+                    <br/>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">
                             Gebruikersnaam:
                         </label>
+                        <br/>
                         <input
                             type="text"
                             id="username"
@@ -81,7 +82,7 @@ function SignUp() {
                 </section>
             )}
         </>
-    )
+    );
 }
 
 export default SignUp;

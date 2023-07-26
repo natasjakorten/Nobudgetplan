@@ -2,34 +2,32 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-
-
 function Profile() {
     const [activityData, setActivityData] = useState({});
     let chosenActivityData;
 
-    async function fetchData() {
-        try{
-            const result = await axios.get('http://www.boredapi.com/api/activity?participants=3', {
-                'Accept': 'application/json'
-            });
-            setActivityData(result.data);
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
     async function chooseActivity() {
         chosenActivityData = 'De gekozen activiteit is: ' + activityData.activity + ' - Groetjes Natasja.';
         console.log(chosenActivityData);
+
+        async function fetchData() {
+            try{
+                const result = await axios.get('http://www.boredapi.com/api/activity?participants=3', {
+                    'Accept': 'application/json'
+                });
+                setActivityData(result.data);
+            } catch (e) {
+                console.error(e);
+            }
     }
 
     let element = <>
         <h1>Profielpagina</h1>
         <section>
             <h2>Gegevens</h2>
-            <p><strong>Gebruikersnaam:</strong> blabla</p>
-            <p><strong>Email:</strong> blabla@test.com</p>
+            <p><strong>Gebruikersnaam:</strong> Piet</p>
+            <p><strong>Email:</strong> Piet@Novi.nl</p>
+            <p><strong>Wachtwoord:</strong> 123456</p>
         </section>
 
         <section>
@@ -57,8 +55,11 @@ function Profile() {
             </button>
         </section>
         <p>Terug naar de <Link to="/">homepagina</Link></p>
-        </>;
-    return element;
-}
 
-export default Profile;
+        return element;
+        </>;
+
+
+    }
+
+export default Profile

@@ -19,6 +19,9 @@ De website bestaat uit volgende pagina's:
 -Tips en ideeën
 -Veel gestelde vragen
 -Contact.
+Homepage
+![](C:\Users\Natasja\Desktop\Schermafbeelding 2023-07-25 224240.png)
+
 
 
 
