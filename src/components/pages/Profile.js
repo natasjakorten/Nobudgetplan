@@ -10,15 +10,15 @@ function Profile() {
         chosenActivityData = 'De gekozen activiteit is: ' + activityData.activity + ' - Groetjes Natasja.';
         console.log(chosenActivityData)};
 
-        async function fetchData() {
-            try{
-                const result = await axios.get('http://www.boredapi.com/api/activity?participants=3', {
-                    'Accept': 'application/json'
-                });
-                setActivityData(result.data);
-            } catch (e) {
-                console.error(e);
-            }
+    async function fetchData() {
+        try{
+            const result = await axios.get('http://www.boredapi.com/api/activity?participants=3', {
+                'Accept': 'application/json'
+            });
+            setActivityData(result.data);
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     let element = <>
@@ -57,9 +57,9 @@ function Profile() {
         <p>Terug naar de <Link to="/">homepagina</Link></p>
 
         return element;
-        </>;
+    </>;
 
 
-    }
+}
 
 export default Profile
