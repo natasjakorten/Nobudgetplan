@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import axios from "axios";
 
-function SignIn() {
-    const [activityData, setActivityData] = useState({});
-    let chosenActivityData;
 
 
         async function fetchData() {

@@ -8,7 +8,7 @@ function Profile() {
 
     async function chooseActivity() {
         chosenActivityData = 'De gekozen activiteit is: ' + activityData.activity + ' - Groetjes Natasja.';
-        console.log(chosenActivityData);
+        console.log(chosenActivityData)};
 
         async function fetchData() {
             try{
