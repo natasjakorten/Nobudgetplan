@@ -21,7 +21,8 @@ function Profile() {
         }
     }
 
-
+ return
+    <>
         <h1>Profielpagina</h1>
         <section>
             <h2>Gegevens</h2>
@@ -29,13 +30,10 @@ function Profile() {
             <p><strong>Email:</strong> Piet@Novi.nl</p>
             <p><strong>Wachtwoord:</strong> 123456</p>
         </section>
-
         <section>
             <h2>beveiligd wachtwoord</h2>
             <p>Klik hieronder aan als je de activiteit per mail wilt ontvangen</p
         </section>
-
-
 
             <h2>Gevonden activiteit:</h2>
             {activityData.activity}
@@ -57,6 +55,7 @@ function Profile() {
         <p>Terug naar de <Link to="/">homepagina</Link></p>
 
     </>;
+);
 }
 
 export default Profile
