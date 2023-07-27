@@ -21,9 +21,13 @@ De website bestaat uit volgende pagina's:
 -Contact.
 Homepage
 ![](C:\Users\Natasja\Desktop\Schermafbeelding 2023-07-25 224240.png)
+Gebruikte benodigheden: Bored api en de heruku app
+gebruikte wachtwoord gegevens:
+gebruiksernaam:
+Email
+wachtwoord
 
-
-
+handleiding:
 
 ## Available Scripts
 

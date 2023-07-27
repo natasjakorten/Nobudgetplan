@@ -21,7 +21,7 @@ function Profile() {
         }
     }
 
-    let element = <>
+
         <h1>Profielpagina</h1>
         <section>
             <h2>Gegevens</h2>
@@ -32,8 +32,8 @@ function Profile() {
 
         <section>
             <h2>beveiligd wachtwoord</h2>
-            <p>Klik hieronder aan als je de activiteit per mail wilt ontvangen</p>
-
+            <p>Klik hieronder aan als je de activiteit per mail wilt ontvangen</p
+        </section>
 
 
 
@@ -56,10 +56,7 @@ function Profile() {
         </section>
         <p>Terug naar de <Link to="/">homepagina</Link></p>
 
-        return element;
     </>;
-
-
 }
 
 export default Profile
