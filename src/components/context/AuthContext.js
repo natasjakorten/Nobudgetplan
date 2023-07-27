@@ -1,7 +1,8 @@
 import { React, createContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import jwtDecode from "jwt-decode"
-import axios from "axios"
+import {useeffect} from 'react';
+import jwtDecode from "jwt-decode";
+import axios from "axios";
 
 export const AuthContext = createContext({});
 
@@ -9,11 +10,10 @@ function AuthContextProvider({ children }) {
     const [isAuth, setIsAuth] = useState
     isAuthenticated: false,
         user: null,
-        status:'pending',
-});
+        status:'pending
 
- useEffect(effect() =>{
-    const token = localStorage.getItem(key:'token');
+ useEffect(effect() => {
+    const token = localStorage.getItem(key:'token')
     if (token) {
         const decodeToken = jwtDecode(token);
         console.log(decodedToken);
@@ -21,8 +21,8 @@ function AuthContextProvider({ children }) {
     } else {
         setIsAuth( value:{
         ...isAuth,
-                status:'done',
-        });
+                status: 'done',
+        })
     }
 }, deps: []);
 
