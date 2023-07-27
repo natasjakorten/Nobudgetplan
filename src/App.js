@@ -9,9 +9,12 @@ import Tipsenideeen from './components/pages/Tipsenideeen';
 import Veelgesteldevragen from './components/pages/Veelgesteldevragen';
 import Contact from './components/pages/Contact';
 import Navigation from './components/Navigation/Navigation';
+import {AuthContext} from "./components/context/AuthContext";
 
 
 function App() {
+    const { isAuthenticated } = useContext(AuthContext);
+
     return (
         <Router>
             <Navigation />
@@ -19,7 +22,7 @@ function App() {
                 <Route path='/' exact element={<Product />} />
                 <Route path='/signin' element={<SignIn />} />
                 <Route path='/signup' element={<SignUp />} />
-                <Route path='/profile' element={<Profile />} />
+                <Route path='/profile' element={isAuthenticated ? <profile/> : < Navigate to="/Signup"/>}/>
                 <Route path='/tipsenideeen' element={<Tipsenideeen />} />
                 <Route path='/veelgesteldevragen' element={<Veelgesteldevragen />} />
                 <Route path='/contact' element={<Contact />} />
